@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e3a8a
+        );
+
+    color: white;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 20px;
+}
+
+
+.logo {
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+
+.card {
+    background: rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.3);
+}
+
+
+.card h2 {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+input {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #22c55e;
+
+    color: white;
+}
+
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+button.secondary {
+    background: #3b82f6;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.message {
+    text-align: center;
+
+    margin-top: 15px;
+
+    min-height: 20px;
+
+    color: #facc15;
+}
+
+
+/* GAME */
+
+.gameInfo {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+#gameCanvas {
+    width: 100%;
+
+    max-width: 500px;
+
+    display: block;
+
+    margin: auto;
+
+    background: #020617;
+
+    border-radius: 15px;
+
+    touch-action: none;
+}
+
+
+/* KONTROL HP */
+
+.controls {
+    width: 220px;
+
+    margin: 15px auto;
+
+    text-align: center;
+}
+
+
+.control {
+    width: 60px;
+
+    height: 55px;
+
+    padding: 0;
+
+    margin: 4px;
+
+    background: #334155;
+
+    font-size: 22px;
+
+    border-radius: 12px;
+}
+
+
+.control-row {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* LEADERBOARD */
+
+.leaderboard {
+    margin-top: 10px;
+}
+
+
+.rank {
+    display: flex;
+
+    align-items: center;
+
+    padding: 14px;
+
+    margin-bottom: 8px;
+
+    background:
+        rgba(255,255,255,0.1);
+
+    border-radius: 10px;
+}
+
+
+.rank-number {
+    width: 45px;
+
+    font-weight: bold;
+}
+
+
+.rank-name {
+    flex: 1;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.rank-score {
+    font-weight: bold;
+}
+
+
+.rank:nth-child(1) {
+    background:
+        rgba(250,204,21,0.25);
+}
+
+
+.rank:nth-child(2) {
+    background:
+        rgba(203,213,225,0.2);
+}
+
+
+.rank:nth-child(3) {
+    background:
+        rgba(180,83,9,0.25);
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 27px;
+
+        margin-top: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+}
