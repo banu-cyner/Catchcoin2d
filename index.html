@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Catch The Coin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- MENU UTAMA -->
+    <section id="menuScreen">
+
+        <div class="logo">
+            🪙 CATCH THE COIN
+        </div>
+
+        <div class="card">
+
+            <h2>Masuk untuk Bermain</h2>
+
+            <input
+                id="username"
+                type="text"
+                placeholder="Username"
+                maxlength="20"
+                autocomplete="off"
+            >
+
+            <input
+                id="whatsapp"
+                type="tel"
+                placeholder="Nomor WhatsApp"
+                maxlength="20"
+                autocomplete="off"
+            >
+
+            <button id="startButton">
+                🎮 MULAI GAME
+            </button>
+
+            <button
+                id="leaderboardButton"
+                class="secondary">
+                🏆 LEADERBOARD
+            </button>
+
+            <div
+                id="menuMessage"
+                class="message">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME -->
+    <section id="gameScreen" class="hidden">
+
+        <div class="gameInfo">
+
+            <div>
+                SCORE:
+                <span id="score">0</span>
+            </div>
+
+            <div>
+                TIME:
+                <span id="time">30</span>
+            </div>
+
+        </div>
+
+
+        <canvas
+            id="gameCanvas"
+            width="500"
+            height="600">
+        </canvas>
+
+
+        <!-- KONTROL HP -->
+        <div class="controls">
+
+            <button
+                class="control up"
+                data-key="ArrowUp">
+                ▲
+            </button>
+
+            <div class="control-row">
+
+                <button
+                    class="control"
+                    data-key="ArrowLeft">
+                    ◀
+                </button>
+
+                <button
+                    class="control"
+                    data-key="ArrowDown">
+                    ▼
+                </button>
+
+                <button
+                    class="control"
+                    data-key="ArrowRight">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="gameMenuButton"
+            class="secondary">
+            ← MENU
+        </button>
+
+    </section>
+
+
+    <!-- LEADERBOARD -->
+    <section id="leaderboardScreen" class="hidden">
+
+        <div class="logo">
+            🏆 LEADERBOARD
+        </div>
+
+        <div class="card">
+
+            <div id="leaderboard"
+                 class="leaderboard">
+
+                Memuat leaderboard...
+
+            </div>
+
+            <button
+                id="backButton">
+                ← KEMBALI
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="game.js"></script>
+
+</body>
+</html>
